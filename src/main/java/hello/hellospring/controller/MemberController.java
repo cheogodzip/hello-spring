@@ -18,6 +18,7 @@ public class MemberController {
     @Autowired
     public MemberController(MemberService memberService) {
         this.memberService = memberService;
+        System.out.println("memberService = " + memberService.getClass()); //Aop로 생긴 프록시 확인하기
     }
 
     @GetMapping("/members/new")
